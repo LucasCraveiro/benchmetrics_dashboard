@@ -1,0 +1,179 @@
+#root {
+  min-width: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header {
+  background-color: #4caf50;
+  padding: 20px;
+  text-align: center;
+}
+
+.logo {
+  height: 40px;
+}
+
+nav {
+  background-color: #000;
+  padding: 20px 20px 0 20px;
+  display: flex;
+}
+
+.tab {
+  background: none;
+  border: none;
+  border-radius: 2px;
+  color: white;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.tab.active {
+  background-color: #4caf50;
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 30px;
+}
+
+.metric-card {
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+  width: calc(25% - 20px);
+  overflow: hidden;
+}
+
+.metric-header {
+  background-color: #4caf50;
+  color: white;
+  padding: 5px 0 5px 15px;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.metric-content {
+  padding: 20px;
+  display: flex;
+  justify-content: start;
+  align-items: baseline;
+  gap: 10px;
+}
+
+.metric-value {
+  font-size: 32px;
+  font-weight: 500;
+}
+
+.slash {
+  font-size: 32px;
+  font-weight: 400;
+}
+
+.metric-percentile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 32px;
+  font-weight: 500;
+}
+
+.metric-percentile .metric-arrow {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.metric-percentile .metric-arrow .arrow {
+  max-width: 15px;
+}
+
+.metric-percentile.positive {
+  color: #4caf50;
+}
+
+.metric-percentile.negative {
+  color: #ff5722;
+}
+
+.pctl {
+  font-size: 12px;
+  vertical-align: super;
+}
+
+.metric-change {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  gap: 5px;
+  padding: 10px;
+  background-color: #f9f9f9;
+  font-size: 12px;
+  color: #666;
+}
+
+.metric-change .positive {
+  color: #4caf50;
+}
+
+.metric-change .negative {
+  color: #ff5722;
+}
+
+@media (max-width: 1200px) {
+  .metric-header {
+    font-size: 14px;
+  }
+
+  .metric-value {
+    font-size: 28px;
+  }
+
+  .slash {
+    font-size: 28px;
+  }
+
+  .metric-percentile {
+    font-size: 28px;
+  }
+
+  .metric-content {
+    padding: 15px;
+    gap: 8px;
+  }
+}
+
+@media (max-width: 992px) {
+  .metric-card {
+    width: calc(50% - 20px);
+  }
+
+  .metric-header {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 778px) {
+}
+
+@media (max-width: 520px) {
+  .metric-card {
+    width: 100%;
+  }
+}
